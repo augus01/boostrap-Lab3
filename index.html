@@ -1,11 +1,441 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arquitecturas de Software & CI</title>
+  <!-- COMPONENTE BOOTSTRAP: CDN Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
-<body>
-    
+
+<body class="bg-light">
+
+  <!-- =====================================================
+       COMPONENTE: Navbar
+       ===================================================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="#">
+        <i></i>Laboratorio 03
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto gap-2">
+          <li class="nav-item">
+            <a class="nav-link" href="#arquitecturas">Arquitecturas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#comparativa">Comparativa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#integracion">Integración Continua</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =====================================================
+       COMPONENTE: Jumbotron / Hero con display utilitarios
+       ===================================================== -->
+  <header class="bg-dark text-white py-5 mb-5">
+    <div class="container text-center py-4">
+      <h1 class="display-4 fw-bold">Arquitecturas de Software</h1>
+      <p class="lead text-secondary col-md-7 mx-auto mt-3">
+        <!-- [CONTENIDO] Subtítulo o descripción breve de la página -->
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================================================
+       SECCIÓN 1: ARQUITECTURAS
+       COMPONENTE: Accordion (una arquitectura por ítem)
+       ===================================================== -->
+  <section id="arquitecturas" class="container mb-5">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold display-6">Tipos de Arquitectura</h2>
+      <p class="text-muted col-md-6 mx-auto">
+        <!-- [CONTENIDO] Introducción breve a la sección de arquitecturas -->
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+    </div>
+
+    <!-- COMPONENTE: Accordion -->
+    <div class="accordion accordion-flush shadow-sm rounded overflow-hidden" id="accordionArquitecturas">
+
+      <!-- Item 1: Monolito -->
+      <div class="accordion-item border-0 border-bottom">
+        <h2 class="accordion-header">
+          <button class="accordion-button fw-semibold fs-5 bg-white" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseMonolito">
+
+            Arquitectura Monolito
+          </button>
+        </h2>
+        <div id="collapseMonolito" class="accordion-collapse collapse show" data-bs-parent="#accordionArquitecturas">
+          <div class="accordion-body bg-white">
+            <div class="row align-items-center g-4">
+              <div class="col-md-8">
+                <h5 class="fw-bold">
+                  <!-- [CONTENIDO] Título o subtítulo del monolito -->
+                  ¿Qué es la Arquitectura Monolítica?
+                </h5>
+                <p class="text-muted">
+                  <!-- [CONTENIDO] Explicación completa de la arquitectura monolítica -->
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat.
+                </p>
+                <p class="text-muted">
+                  <!-- [CONTENIDO] Ventajas y desventajas del monolito -->
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                  laborum.
+                </p>
+                <div class="d-flex gap-2 flex-wrap mt-3">
+                  <span class="badge bg-subtle text-dark border px-3 py-2">Simple de desplegar</span>
+                  <span class="badge bg-subtle text-dark border px-3 py-2">Alta cohesión</span>
+                  <span class="badge bg-subtle text-dark border px-3 py-2">Difícil de escalar</span>
+                </div>
+              </div>
+              <div class="col-md-4 text-center">
+                <!-- [CONTENIDO] Imagen o diagrama de arquitectura monolítica -->
+                <div class="bg-danger-subtle rounded-4 d-flex align-items-center justify-content-center"
+                  style="height:180px;">
+                  <div class="text-center text-danger">
+                    <i class="bi bi-boxes" style="font-size:3.5rem;"></i>
+                    <p class="mt-2 fw-semibold small">[Diagrama Monolito]</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2: Hexagonal -->
+      <div class="accordion-item border-0 border-bottom">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fw-semibold fs-5 bg-white" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseHexagonal">
+            Arquitectura Hexagonal
+          </button>
+        </h2>
+        <div id="collapseHexagonal" class="accordion-collapse collapse" data-bs-parent="#accordionArquitecturas">
+          <div class="accordion-body bg-white">
+            <div class="row align-items-center g-4">
+              <div class="col-md-8">
+                <h5 class="fw-bold ">
+                  <!-- [CONTENIDO] Título o subtítulo de la arquitectura hexagonal -->
+                  ¿Qué es la Arquitectura Hexagonal?
+                </h5>
+                <p class="text-muted">
+                  <!-- [CONTENIDO] Explicación completa de la arquitectura hexagonal (Ports & Adapters) -->
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat.
+                </p>
+                <p class="text-muted">
+                  <!-- [CONTENIDO] Casos de uso y contexto de aplicación -->
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Excepteur sint occaecat cupidatat non proident.
+                </p>
+                <div class="d-flex gap-2 flex-wrap mt-3">
+                  <span class="badge bg-subtle text-dark border px-3 py-2">Ports &
+                    Adapters</span>
+                  <span class="badge bg-subtle text-dark border px-3 py-2">Alta
+                    testeabilidad</span>
+                  <span class="badge bg-subtle text-dark border px-3 py-2">Desacoplada</span>
+                </div>
+              </div>
+              <div class="col-md-4 text-center">
+                <!-- [CONTENIDO] Imagen o diagrama de arquitectura hexagonal -->
+                <div class="bg-warning-subtle rounded-4 d-flex align-items-center justify-content-center"
+                  style="height:180px;">
+                  <div class="text-center text-warning">
+                    <i class="bi bi-hexagon-half" style="font-size:3.5rem;"></i>
+                    <p class="mt-2 fw-semibold small">[Diagrama Hexagonal]</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3: Microservicios -->
+      <div class="accordion-item border-0">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fw-semibold fs-5 bg-white" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseMicro">
+            Arquitectura Microservicios
+          </button>
+        </h2>
+        <div id="collapseMicro" class="accordion-collapse collapse" data-bs-parent="#accordionArquitecturas">
+          <div class="accordion-body bg-white">
+            <div class="row align-items-center g-4">
+              <div class="col-md-8">
+                <h5 class="fw-bold ">
+                  <!-- [CONTENIDO] Título o subtítulo de los microservicios -->
+                  ¿Qué son los Microservicios?
+                </h5>
+                <p class="text-muted">
+                  <!-- [CONTENIDO] Explicación completa de la arquitectura de microservicios -->
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat.
+                </p>
+                <p class="text-muted">
+                  <!-- [CONTENIDO] Ventajas, desafíos y tecnologías relacionadas (Docker, K8s, etc.) -->
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Excepteur sint occaecat cupidatat non proident.
+                </p>
+                <div class="d-flex gap-2 flex-wrap mt-3">
+                  <span class="badge bg-subtle text-dark border px-3 py-2">Escalabilidad</span>
+                  <span class="badge bg-subtle text-dark border px-3 py-2">Independencia</span>
+                  <span class="badge bg-subtle text-dark border px-3 py-2">Alta complejidad</span>
+                </div>
+              </div>
+              <div class="col-md-4 text-center">
+                <!-- [CONTENIDO] Imagen o diagrama de microservicios -->
+                <div class="bg-success-subtle rounded-4 d-flex align-items-center justify-content-center"
+                  style="height:180px;">
+                  <div class="text-center text-success">
+                    <i class="bi bi-grid-3x3-gap-fill" style="font-size:3.5rem;"></i>
+                    <p class="mt-2 fw-semibold small">[Diagrama Microservicios]</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <!-- =====================================================
+       SECCIÓN 2: COMPARATIVA
+       COMPONENTE: Cards (3 en fila con Bootstrap Grid)
+       ===================================================== -->
+  <section id="comparativa" class="bg-dark text-white py-5 mb-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold display-6">¿Cuál elegir?</h2>
+        <p class="text-secondary col-md-6 mx-auto">
+          <!-- [CONTENIDO] Introducción a la comparativa entre arquitecturas -->
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit ut labore.
+        </p>
+      </div>
+
+      <!-- COMPONENTE: Cards en grid row-cols -->
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <!-- Card Monolito -->
+        <div class="col">
+          <div class="card border-danger bg-dark text-white">
+            <div class="card-header bg-danger text-center py-3">
+              <i class="bi bi-boxes fs-2"></i>
+              <h5>Monolito</h5>
+            </div>
+            <div class="card-body">
+              <p class=" small">
+                <!-- [CONTENIDO] Descripción comparativa del monolito -->
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua ut enim.
+              </p>
+              <hr class="border-secondary">
+              <ul class="list-unstyled small ">
+                <!-- [CONTENIDO] Lista de pros del monolito -->
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Lorem ipsum ventaja 1</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Lorem ipsum ventaja 2</li>
+                <!-- [CONTENIDO] Lista de contras del monolito -->
+                <li><i class="bi bi-x-circle-fill text-danger me-2"></i>Lorem ipsum desventaja 1</li>
+                <li><i class="bi bi-x-circle-fill text-danger me-2"></i>Lorem ipsum desventaja 2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Hexagonal -->
+        <div class="col">
+          <div class="card border-warning bg-dark text-white">
+            <div class="card-header bg-warning  text-center py-3">
+              <i class="bi bi-hexagon-half fs-2"></i>
+              <h5>Hexagonal</h5>
+            </div>
+            <div class="card-body">
+              <p class=" small">
+                <!-- [CONTENIDO] Descripción comparativa del monolito -->
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua ut enim.
+              </p>
+              <hr class="border-secondary">
+              <ul class="list-unstyled small ">
+                <!-- [CONTENIDO] Lista de pros del monolito -->
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Lorem ipsum ventaja 1</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Lorem ipsum ventaja 2</li>
+                <!-- [CONTENIDO] Lista de contras del monolito -->
+                <li><i class="bi bi-x-circle-fill text-danger me-2"></i>Lorem ipsum desventaja 1</li>
+                <li><i class="bi bi-x-circle-fill text-danger me-2"></i>Lorem ipsum desventaja 2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Microservicios -->
+        <div class="col">
+          <div class="card h-100 border-success bg-dark text-white shadow-lg">
+            <div class="card-header bg-success text-white text-center py-3">
+              <i class="bi bi-grid-3x3-gap-fill fs-2"></i>
+              <h5 class="mt-2 mb-0 fw-bold">Microservicios</h5>
+            </div>
+            <div class="card-body">
+              <p class=" small">
+                <!-- [CONTENIDO] Descripción comparativa del monolito -->
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua ut enim.
+              </p>
+              <hr class="border-secondary">
+              <ul class="list-unstyled small ">
+                <!-- [CONTENIDO] Lista de pros del monolito -->
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Lorem ipsum ventaja 1</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Lorem ipsum ventaja 2</li>
+                <!-- [CONTENIDO] Lista de contras del monolito -->
+                <li><i class="bi bi-x-circle-fill text-danger me-2"></i>Lorem ipsum desventaja 1</li>
+                <li><i class="bi bi-x-circle-fill text-danger me-2"></i>Lorem ipsum desventaja 2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- =====================================================
+       SECCIÓN 3: INTEGRACIÓN CONTINUA
+       COMPONENTE: List Group + Progress Bar + Alert
+       ===================================================== -->
+  <section id="integracion" class="container mb-5">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold display-6">Integración Continua</h2>
+      <p class="text-muted col-md-6 mx-auto">
+        <!-- [CONTENIDO] Introducción al concepto de integración continua -->
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+      </p>
+    </div>
+
+    <div class="row g-5 align-items-start row justify-content-center">
+
+      <!-- Columna izquierda: Explicación + flujo -->
+      <div class="col-md-6 text-center">
+        <h4 class="fw-bold mb-3">
+          <!-- [CONTENIDO] Título de la explicación de CI -->
+          ¿Qué es la Integración Continua?
+        </h4>
+        <p class="text-muted">
+          <!-- [CONTENIDO] Definición y explicación de integración continua -->
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+        </p>
+        <p class="text-muted">
+          <!-- [CONTENIDO] Cómo se aplicaría CI en un proyecto web con Bootstrap -->
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident.
+        </p>
+
+
+      </div>
+
+      <!-- Columna derecha: Imagen + List Group de ramas -->
+      <div class="col-md-6">
+
+        <!-- [CONTENIDO] Imagen del flujo de integración continua / diagrama CI/CD -->
+        <div class="bg-primary-subtle rounded-4 d-flex align-items-center justify-content-center mb-4 shadow-sm"
+          style="height:280px;">
+          <div class="text-center text-primary">
+            <i class="bi bi-diagram-2-fill" style="font-size:5rem;"></i>
+            <p class="fw-semibold mt-3 fs-5">[Imagen / Diagrama CI/CD]</p>
+            <p class="small text-muted">Reemplazar con imagen del flujo</p>
+          </div>
+        </div>
+
+        <!-- COMPONENTE: List Group (ramas y flujo Git) -->
+
+      </div>
+
+      <div class="container col-md-6">
+        <h5 class="fw-bold mt-4">Estrategia de ramas</h5>
+        <ul class="list-group list-group-flush shadow-sm rounded overflow-hidden">
+          <li class="list-group-item d-flex align-items-center gap-3 py-3">
+            <span class=" px-3">main</span>
+            <span class="small text-muted">
+              <!-- [CONTENIDO] Descripción de la rama main -->
+              Lorem ipsum: rama de producción estable.
+            </span>
+          </li>
+          <li class="list-group-item d-flex align-items-center gap-3 py-3">
+            <span class="px-3">develop</span>
+            <span class="small text-muted">
+              <!-- [CONTENIDO] Descripción de la rama develop -->
+              Lorem ipsum: integración de nuevas funcionalidades.
+            </span>
+          </li>
+          <li class="list-group-item d-flex align-items-center gap-3 py-3">
+            <span class=" px-3">feature</span>
+            <span class="small text-muted">
+              <!-- [CONTENIDO] Descripción de las ramas feature -->
+              Lorem ipsum: desarrollo de funcionalidades aisladas.
+            </span>
+          </li>
+          <li class="list-group-item d-flex align-items-center gap-3 py-3">
+            <span class=" px-3">hotfix</span>
+            <span class="small ">
+              <!-- [CONTENIDO] Descripción de las ramas hotfix -->
+              Lorem ipsum: correcciones urgentes en producción.
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- =====================================================
+       COMPONENTE: Footer con utilidades Bootstrap
+       ===================================================== -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+      <p class="mb-1 fw-semibold">
+        <!-- [CONTENIDO] Nombre del equipo -->
+        Grupo 1 SuperMegaPro &mdash; Aplicaciones y Tecnologías de la Web
+      </p>
+      <p class="text-secondary small mb-0">Octavo Semestre 2026 &copy; Universidad San Sebastián</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
