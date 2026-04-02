@@ -12,5 +12,3 @@ Este proyecto es una práctica de diseño y maquetación web empleando HTML5 y *
 - HTML5
 - CSS (Bootstrap 5 CDN)
 - Bootstrap Icons
-
-¡Listo para ser ampliado o implementado como base de un portal educativo!
